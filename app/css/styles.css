@@ -486,74 +486,81 @@ h6 {
   margin-bottom: 0.8em;
 }
 
-/* line 52 */
+/* line 55 */
 html,
 body {
   margin: 0;
   padding: 0;
 }
 
-/* line 57 */
+/* line 60 */
 * {
   -webkit-print-color-adjust: exact;
 }
 
-/* line 61 */
+/* line 64 */
 [class^="box"] {
-  margin: 50px;
+  margin: 50px 0;
 }
 
-/* line 65 */
-.tab {
-  border: 1px solid #333842;
-  width: 50px;
-  height: 200px;
-  margin-top: 101px;
+/* line 69 */
+.tab,
+[class^="content"] {
+  height: 500px;
 }
 
 /* line 75 */
-.face-1,
-.face-2,
-.face-3,
-.face-4 {
+[class^="top"],
+[class^="content"],
+[class^="bottom"] {
+  width: 147px;
+}
+
+/* line 80 */
+[class^="top"],
+[class^="bottom"] {
+  height: 147px;
+}
+
+/* line 84 */
+.tab {
+  border: 1px solid #333842;
+}
+
+/* line 88 */
+[class^="face"] {
   position: relative;
   border: 1px solid #333842;
 }
 
-/* line 80 */
+/* line 93 */
 .face-1 {
   left: -1px;
 }
 
-/* line 84 */
+/* line 97 */
 .face-2 {
   left: -2px;
 }
 
-/* line 88 */
+/* line 101 */
 .face-3 {
   left: -3px;
 }
 
-/* line 92 */
+/* line 105 */
 .face-4 {
   left: -4px;
 }
 
-/* line 99 */
-.top-1,
-.top-2,
-.top-3,
-.top-4 {
-  width: 100px;
-  height: 100px;
+/* line 110 */
+[class^="top"],
+[class^="bottom"] {
   position: relative;
 }
-/* line 104 */
-.top-1:after,
-.top-2:after,
-.top-3:after,
-.top-4:after {
+/* line 113 */
+[class^="top"]:after,
+[class^="bottom"]:after {
   content: "";
   position: absolute;
   width: 130%;
@@ -563,7 +570,7 @@ body {
   border-top: 1px solid #333842;
 }
 
-/* line 118 */
+/* line 127 */
 .top-1,
 .top-2,
 .bottom-3,
@@ -571,7 +578,7 @@ body {
   -webkit-transform: rotate(45deg);
 }
 
-/* line 125 */
+/* line 134 */
 .top-3,
 .top-4,
 .bottom-1,
@@ -579,41 +586,19 @@ body {
   -webkit-transform: rotate(-45deg);
 }
 
-/* line 133 */
-.content-1,
-.content-2,
-.content-3,
-.content-4 {
+/* line 139 */
+[class^="content"] {
   text-transform: uppercase;
   line-height: 1;
   font-weight: 700;
   font-size: 10px;
-  width: 100px;
-  height: 200px;
   border-top: 1px solid #333842;
   border-bottom: 1px solid #333842;
   padding: 10px;
 }
 
-/* line 148 */
-.bottom-1,
-.bottom-2,
-.bottom-3,
-.bottom-4 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-/* line 153 */
-.bottom-1:after,
-.bottom-2:after,
-.bottom-3:after,
-.bottom-4:after {
-  content: "";
-  position: absolute;
-  width: 130%;
-  top: 50%;
-  left: -15%;
-  margin-top: -1px;
-  border-top: 1px solid #333842;
+/* line 149 */
+.page-break {
+  display: block;
+  page-break-before: always;
 }

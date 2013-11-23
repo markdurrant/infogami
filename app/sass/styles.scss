@@ -47,6 +47,9 @@
 //===============================================================================
 // playground for development
 $cm: 100px;
+$face-width: 147px;
+$face-height: 500px;
+
 
 html,
 body {
@@ -59,20 +62,30 @@ body {
 }
 
 [class^="box"]{
-  margin: ( $cm / 2 );
+  margin: ( $cm / 2 ) 0;
+}
+
+.tab,
+[class^="content"] {
+  height: $face-height;
+}
+
+[class^="top"],
+[class^="content"],
+[class^="bottom"] {
+  width: $face-width;
+}
+
+[class^="top"],
+[class^="bottom"] {
+  height: $face-width;
 }
 
 .tab{
   border: 1px solid $ink;
-  width: $cm * .5;
-  height: $cm * 2;
-  margin-top: $cm * 1 + 1px;
 }
 
-.face-1,
-.face-2,
-.face-3,
-.face-4 {
+[class^="face"] {
   position: relative;
   border: 1px solid $ink;
 }
@@ -93,12 +106,8 @@ body {
   left: -1px * 4;
 }
 
-.top-1,
-.top-2,
-.top-3,
-.top-4 {
-  width: $cm * 1;
-  height: $cm * 1;
+[class^="top"],
+[class^="bottom"] {
   position: relative;
 
   &:after {
@@ -127,36 +136,17 @@ body {
 }
 
 
-.content-1,
-.content-2,
-.content-3,
-.content-4 {
+[class^="content"] {
   text-transform: uppercase;
   line-height: 1;
   font-weight: 700;
   font-size: $cm * .1;
-  width: $cm * 1;
-  height: $cm * 2;
   border-top: 1px solid $ink;
   border-bottom: 1px solid $ink;
   padding: $cm * .1;
 }
 
-.bottom-1,
-.bottom-2,
-.bottom-3,
-.bottom-4 {
-  width: $cm * 1;
-  height: $cm * 1;
-  position: relative;
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: 130%;
-    top: 50%;
-    left: -15%;
-    margin-top: -( $cm / 50 / 2 );
-    border-top: 1px solid $ink;
-  }
+.page-break { 
+  display: block; 
+  page-break-before: always;
 }
