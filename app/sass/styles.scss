@@ -54,12 +54,12 @@ body {
   padding: 0;
 }
 
-body{
-  padding: $cm;
-}
-
 * {
   -webkit-print-color-adjust: exact;
+}
+
+[class^="box"]{
+  margin: ( $cm / 2 );
 }
 
 .tab{
@@ -131,6 +131,8 @@ body{
 .content-2,
 .content-3,
 .content-4 {
+  text-transform: uppercase;
+  line-height: 1;
   font-weight: 700;
   font-size: $cm * .1;
   width: $cm * 1;

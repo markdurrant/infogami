@@ -494,13 +494,13 @@ body {
 }
 
 /* line 57 */
-body {
-  padding: 100px;
+* {
+  -webkit-print-color-adjust: exact;
 }
 
 /* line 61 */
-* {
-  -webkit-print-color-adjust: exact;
+[class^="box"] {
+  margin: 50px;
 }
 
 /* line 65 */
@@ -584,6 +584,8 @@ body {
 .content-2,
 .content-3,
 .content-4 {
+  text-transform: uppercase;
+  line-height: 1;
   font-weight: 700;
   font-size: 10px;
   width: 100px;
@@ -593,7 +595,7 @@ body {
   padding: 10px;
 }
 
-/* line 146 */
+/* line 148 */
 .bottom-1,
 .bottom-2,
 .bottom-3,
@@ -602,7 +604,7 @@ body {
   height: 100px;
   position: relative;
 }
-/* line 151 */
+/* line 153 */
 .bottom-1:after,
 .bottom-2:after,
 .bottom-3:after,

@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "name": "usa",
+      "militarySpending" : "682",
+      "gdp": "51,704"
+    },
+    {
+      "name": "china",
+      "militarySpending" : "166",
+      "gdp": "6,071"
+    },
+    {
+      "name": "russia",
+      "militarySpending" : "90.7",
+      "gdp": "14,302"
+    },
+    {
+      "name": "uk",
+      "militarySpending" : "60.8",
+      "gdp": "39,161"
+    },
+    {
+      "name": "japan",
+      "militarySpending" : "59.3",
+      "gdp": "46,707"
+    }
+  ]
+}
