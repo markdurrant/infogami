@@ -46,3 +46,115 @@
 // DEV-STYLES
 //===============================================================================
 // playground for development
+$cm: 100px;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  padding: $cm;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+}
+
+.tab{
+  border: 1px solid $ink;
+  width: $cm * .5;
+  height: $cm * 2;
+  margin-top: $cm * 1 + 1px;
+}
+
+.face-1,
+.face-2,
+.face-3,
+.face-4 {
+  position: relative;
+  border: 1px solid $ink;
+}
+
+.face-1 {
+  left: -1px;
+}
+
+.face-2 {
+  left: -1px * 2;
+}
+
+.face-3 {
+  left: -1px * 3;
+}
+
+.face-4 {
+  left: -1px * 4;
+}
+
+.top-1,
+.top-2,
+.top-3,
+.top-4 {
+  width: $cm * 1;
+  height: $cm * 1;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 130%;
+    top: 50%;
+    left: -15%;
+    margin-top: -( $cm / 50 / 2 );
+    border-top: 1px solid $ink;
+  }
+}
+
+.top-1,
+.top-2,
+.bottom-3,
+.bottom-4, {
+  -webkit-transform: rotate( 45deg );
+}
+
+.top-3,
+.top-4,
+.bottom-1,
+.bottom-2 {
+  -webkit-transform: rotate( -45deg );
+}
+
+
+.content-1,
+.content-2,
+.content-3,
+.content-4 {
+  font-weight: 700;
+  font-size: $cm * .1;
+  width: $cm * 1;
+  height: $cm * 2;
+  border-top: 1px solid $ink;
+  border-bottom: 1px solid $ink;
+  padding: $cm * .1;
+}
+
+.bottom-1,
+.bottom-2,
+.bottom-3,
+.bottom-4 {
+  width: $cm * 1;
+  height: $cm * 1;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 130%;
+    top: 50%;
+    left: -15%;
+    margin-top: -( $cm / 50 / 2 );
+    border-top: 1px solid $ink;
+  }
+}

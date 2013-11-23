@@ -2,14 +2,18 @@
 // HELPER-CLASSES
 //===============================================================================
 // add bullets to ul
-.text-list{
+.text-list {
   list-style: disc;
   padding-left: 1em;
 }
 
 // clearfix
-.clear-fix:after{
+.clear-fix:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.left {
+  float: left;
 }
