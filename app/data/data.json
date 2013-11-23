@@ -2,28 +2,28 @@
   "items": [
     {
       "name": "usa",
-      "militarySpending" : "682",
-      "gdp": "51,704"
+      "militarySpending" : 682,
+      "gdp": 51704
     },
     {
       "name": "china",
-      "militarySpending" : "166",
-      "gdp": "6,071"
+      "militarySpending" : 166,
+      "gdp": 6071
     },
     {
       "name": "russia",
-      "militarySpending" : "90.7",
-      "gdp": "14,302"
+      "militarySpending" : 90.7,
+      "gdp": 14302
     },
     {
       "name": "uk",
-      "militarySpending" : "60.8",
-      "gdp": "39,161"
+      "militarySpending" : 60.8,
+      "gdp": 39161
     },
     {
       "name": "japan",
-      "militarySpending" : "59.3",
-      "gdp": "46,707"
+      "militarySpending" : 59.3,
+      "gdp": 46707
     }
   ]
 }

@@ -13,9 +13,29 @@ $( document ).ready( function() {
   var minHeight = 100;
   var maxHeight = 300;
 
+  var widthDiff = maxWidth - minWidth;
+  var heightDiff = maxHeight - minHeight;
 
   $.getJSON('/data/data.json', function( data ) {
+    var AllMilitarySpending = [];
+    var AllGdp = [];
+    
     $.each( data.items, function( index, val ) {
+      AllMilitarySpending.push( val.militarySpending );
+      AllGdp.push( val.gdp );
+    });
+
+    var minGdp = _.min( AllGdp );
+    var maxGdp = _.max( AllGdp );
+    var gdpDiff = maxGdp - minGdp;
+    var minMilitarySpending = _.min( AllMilitarySpending );
+    var maxMilitarySpending = _.max( AllMilitarySpending );
+    var militarySpendingDiff = maxMilitarySpending - minMilitarySpending;
+
+    $.each( data.items, function( index, val ) {
+      var itemHeight = minHeight + heightDiff * ( (val.militarySpending - minMilitarySpending) / militarySpendingDiff );
+      var itemWidth = minWidth + widthDiff * ( (val.gdp - minGdp) / gdpDiff );
+
       // create the markup
       $( '.wrap' ).append( '<div class="box-' + ( index + 1 ) + ' clear-fix">' + template + '</div>' );
       $( '.box-' + ( index + 1 ) + ' .content-1' ).append( val.name );
@@ -23,11 +43,11 @@ $( document ).ready( function() {
       $( '.box-' + ( index + 1 ) + ' .content-3' ).append( "$" + val.gdp + " per capita");
       $( '.box-' + ( index + 1 ) + ' .content-4' ).append( visTitle );
       // style the net 
-      $( '.box-' + ( index + 1 ) + ' .tab, .box-' + ( index + 1 ) + ' [class^="content"]' ).css( 'height', maxHeight );
-      $( '.box-' + ( index + 1 ) + ' [class^="top"], .box-' + ( index + 1 ) + ' [class^="content"], .box-' + ( index + 1 ) + ' [class^="bottom"]' ).css( 'width', maxWidth );
-      $( '.box-' + ( index + 1 ) + ' [class^="top"], .box-' + ( index + 1 ) + ' [class^="bottom"]' ).css( 'height', maxWidth );
-      $( '.box-' + ( index + 1 ) + ' .tab' ).css( { 'width': maxWidth / 2, 'margin-top': maxWidth + 1 } );
+      $( '.box-' + ( index + 1 ) + ' .tab, .box-' + ( index + 1 ) + ' [class^="content"]' ).css( 'height', itemHeight );
+      $( '.box-' + ( index + 1 ) + ' [class^="top"], .box-' + ( index + 1 ) + ' [class^="content"], .box-' + ( index + 1 ) + ' [class^="bottom"]' ).css( 'width', itemWidth );
+      $( '.box-' + ( index + 1 ) + ' [class^="top"], .box-' + ( index + 1 ) + ' [class^="bottom"]' ).css( 'height', itemWidth );
+      $( '.box-' + ( index + 1 ) + ' .tab' ).css( { 'width': itemWidth / 2, 'margin-top': itemWidth + 1 } );
     });
   });
-
 });
+// });data.items[0].militarySpending, data.items[1].militarySpending, data.items[2].militarySpending, data.items[3].militarySpending, data.items[4].militarySpending 
