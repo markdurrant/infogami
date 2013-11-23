@@ -238,7 +238,7 @@ table {
 /* line 12, /Users/mark/Dropbox/playground/2.5d.js/app/sass/_elements.scss */
 body {
   background-color: white;
-  color: #333842;
+  color: black;
   font-size: 1.0625em;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.4;
@@ -290,7 +290,7 @@ a:hover {
 blockquote {
   margin: 0;
   padding: 0 2em;
-  border-left: 0.2em solid #333842;
+  border-left: 0.2em solid black;
   font-style: italic;
 }
 /* line 62, /Users/mark/Dropbox/playground/2.5d.js/app/sass/_elements.scss */
@@ -310,7 +310,7 @@ pre {
   -webkit-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: .85em 1.05em;
-  background-color: #5f697c;
+  background-color: #333333;
   color: white;
 }
 
@@ -330,7 +330,7 @@ p samp {
 hr {
   margin: 2em 0;
   border: 0;
-  border-top: 1px dashed #333842;
+  border-top: 1px dashed black;
 }
 
 /* line 98, /Users/mark/Dropbox/playground/2.5d.js/app/sass/_elements.scss */
@@ -380,7 +380,7 @@ input[type="submit"]:hover {
 
 /* line 4, /Users/mark/Dropbox/playground/2.5d.js/app/sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  color: #333842;
+  color: black;
 }
 
 /* line 11, /Users/mark/Dropbox/playground/2.5d.js/app/sass/_typography.scss */
@@ -524,13 +524,13 @@ body {
 
 /* line 84 */
 .tab {
-  border: 1px solid #333842;
+  border: 1px dashed #cccccc;
 }
 
 /* line 88 */
 [class^="face"] {
   position: relative;
-  border: 1px solid #333842;
+  border: 1px dashed #cccccc;
 }
 
 /* line 93 */
@@ -567,7 +567,7 @@ body {
   top: 50%;
   left: -15%;
   margin-top: -1px;
-  border-top: 1px solid #333842;
+  border-top: 1px dashed #cccccc;
 }
 
 /* line 127 */
@@ -592,8 +592,8 @@ body {
   line-height: 1;
   font-weight: 700;
   font-size: 10px;
-  border-top: 1px solid #333842;
-  border-bottom: 1px solid #333842;
+  border-top: 1px dashed #cccccc;
+  border-bottom: 1px dashed #cccccc;
   padding: 10px;
 }
 

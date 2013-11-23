@@ -82,12 +82,12 @@ body {
 }
 
 .tab{
-  border: 1px solid $ink;
+  border: 1px dashed lighten($ink, 80);
 }
 
 [class^="face"] {
   position: relative;
-  border: 1px solid $ink;
+  border: 1px dashed lighten($ink, 80);
 }
 
 .face-1 {
@@ -117,7 +117,7 @@ body {
     top: 50%;
     left: -15%;
     margin-top: -( $cm / 50 / 2 );
-    border-top: 1px solid $ink;
+    border-top: 1px dashed lighten($ink, 80);
   }
 }
 
@@ -141,8 +141,8 @@ body {
   line-height: 1;
   font-weight: 700;
   font-size: $cm * .1;
-  border-top: 1px solid $ink;
-  border-bottom: 1px solid $ink;
+  border-top: 1px dashed lighten($ink, 80);
+  border-bottom: 1px dashed lighten($ink, 80);
   padding: $cm * .1;
 }
 
