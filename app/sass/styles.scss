@@ -58,7 +58,7 @@ body {
 }
 
 * {
-  -webkit-print-color-adjust: exact;
+  @include vendor-prefix ( print-color-adjust, exact );
 }
 
 [class^="box"]{
@@ -125,14 +125,14 @@ body {
 .top-2,
 .bottom-3,
 .bottom-4, {
-  -webkit-transform: rotate( 45deg );
+  @include vendor-prefix( transform, rotate( 45deg ) );
 }
 
 .top-3,
 .top-4,
 .bottom-1,
 .bottom-2 {
-  -webkit-transform: rotate( -45deg );
+  @include vendor-prefix( transform, rotate( -45deg ) );
 }
 
 
